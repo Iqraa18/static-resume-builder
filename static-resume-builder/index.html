@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Resume Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Interactive Resume Builder</h1>
+    </header>
+    <main>
+      <div class="form-section">
+        <h2>Enter Your Details</h2>
+        <form id="resumeForm">
+          <label>
+            Full Name:
+            <input type="text" id="name" placeholder="Your Name" required />
+          </label>
+          <label>
+            Email:
+            <input type="email" id="email" placeholder="Your Email" required />
+          </label>
+          <label>
+            Phone:
+            <input type="tel" id="phone" placeholder="Your Phone" required />
+          </label>
+          <label>
+            Summary:
+            <textarea id="summary" placeholder="Write a short summary"></textarea>
+          </label>
+          <label>
+            Skills (comma-separated):
+            <input type="text" id="skills" placeholder="e.g., JavaScript, HTML" />
+          </label>
+          <label>
+            Work Experience:
+            <textarea id="experience" placeholder="Describe your work experience"></textarea>
+          </label>
+          <button type="submit">Generate Resume</button>
+        </form>
+      </div>
+      <div class="resume-section">
+        <h2>Your Resume</h2>
+        <div id="resumePreview" class="resume-preview">
+          <h1 id="previewName"></h1>
+          <p id="previewEmail"></p>
+          <p id="previewPhone"></p>
+          <p id="previewSummary"></p>
+          <h3>Skills</h3>
+          <ul id="previewSkills"></ul>
+          <h3>Experience</h3>
+          <p id="previewExperience"></p>
+        </div>
+        <button id="downloadResume">Download as PDF</button>
+      </div>
+    </main>
+  </div>
+  <script src="script.js" type="module"></script>
+</body>
+</html>
